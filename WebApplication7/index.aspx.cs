@@ -36,7 +36,6 @@ namespace WebApplication7
             if (From != null) { sql += " cast([TimeStamp] as date)>='" + From + "' AND "; };
             if (To != null) { sql += " cast([TimeStamp] as date)<='" + To + "' AND "; };
             sql = sql.Substring(0, sql.Length - 5);
-            //Response.Write(sql);
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql + " order by device_name, v.SessionName, v.averageSpeedBySession, v.travelDistance FOR JSON PATH;");
