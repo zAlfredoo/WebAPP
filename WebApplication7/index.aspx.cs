@@ -15,7 +15,7 @@ namespace WebApplication7
             string dID=(Request.QueryString["dID"]);
             string From = (Request.QueryString["From"]);
             string To = (Request.QueryString["To"]);
-            string connStr = "Data Source=localhost;Initial Catalog=Alfredo;user=ReadUsr;password=nintendo";
+            string connStr = "Data Source=localhost;Initial Catalog=Alfredo;user=USERHERE;password=PASSWORDHERE";
             string sql = "SELECT DISTINCT v.device_name deviceName, v.SessionName as \"Session.SessionName\", v.averageSpeedBySession as \"Session.averageSpeedBySession\"" +
                 ",v.travelDistance as \"Session.travelDistance\"" +
                 ",(select DATEPART(YEAR, [Timestamp]) as \"Timestamp.year\"" +
